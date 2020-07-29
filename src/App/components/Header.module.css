@@ -62,9 +62,16 @@
   width: auto;
 }
 
-.topbar__link_text {
+.topbar__link_text,
+.topbar__link_cart  {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+}
+
+.topbar__link_cart {
+  padding-left:7px;
+  margin-left: 7px;
+  border-left: 1px solid #fff;
 }
 

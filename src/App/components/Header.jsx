@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
+import { connect } from 'react-redux';
+
+const mapStateToProps = (state) => ({
+  cart: state.cartReducer.cart,
+});
+
+const mapDispatchToProps = (dispatch) => ({});
 
 class Header extends Component {
   render() {
+    const { cart } = this.props;
     return (
       <>
         <header className={styles.header}>
@@ -35,6 +43,9 @@ class Header extends Component {
                       <img src="/images/chaki.png" alt="nunchaki icon"/>
                     </div>
                     <span className={styles.topbar__link_text}>Cart</span>
+                    {cart.length ? (
+                      <span className={styles.topbar__link_cart}>{cart.length}</span>
+                    ) : ( <span></span> )}
                   </Link>
                 </li>
               </ul>
@@ -46,4 +57,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

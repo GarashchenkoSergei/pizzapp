@@ -1,5 +1,11 @@
 export const cartSelector = (state) => state.cart;
 
 export const groupedCart = (state) => {
-  //создать объект с ключами id и значениями из объектов
+  const groupedById = state.reduce(function (accum, item) {
+    accum[item.id] = accum[item.id] || [];
+    accum[item.id].push(item);
+    
+    return accum;
+  }, []);
+  return groupedById;
 }
