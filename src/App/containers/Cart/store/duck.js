@@ -3,12 +3,14 @@ import { createAction } from 'redux-actions';
 
 const initialState = {
   cart: [],
+  isDollar: true,
 };
 
 export const actions = {
   addToCart: createAction(constants.ADD_TO_CART),
   removeFromCart: createAction(constants.REMOVE_FROM_CART),
   removeAllFromCart: createAction(constants.REMOVE_ALL_FROM_CART),
+  changeCurrency: createAction(constants.CHANGE_CURRENCY),
   submitOrder: createAction(constants.SUBMIT_ORDER),
 };
 
@@ -42,6 +44,11 @@ export const cartReducer = (state = initialState, action) => {
         cart: [
           ...state.cart,
         ]
+      }
+    case constants.CHANGE_CURRENCY:
+      return {
+        ...state,
+        isDollar: state.isDollar ? state.isDollar = false : state.isDollar = true,
       }
     default:
       return state;

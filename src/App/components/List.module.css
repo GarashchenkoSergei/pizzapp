@@ -4,10 +4,11 @@
   color: #fff;
   font-size: 14px;
   font-weight: 600;
-  background-color: rgba(19,35,29,1);
+  background-color: #314B2E;
   text-decoration: none;
   cursor: pointer;
   border: none;
+  outline: none;
 }
 
 .menu_content__list {

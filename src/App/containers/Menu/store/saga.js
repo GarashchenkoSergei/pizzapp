@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from 'redux-saga/effects';
+import { takeEvery, put } from 'redux-saga/effects';
 import { actions } from './duck';
 import * as constants from './constants';
 import pseudoServerResponse from '../../../../utils/data';

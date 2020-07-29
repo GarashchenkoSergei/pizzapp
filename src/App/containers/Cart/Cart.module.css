@@ -46,7 +46,7 @@
 
 .close_button,
 .item_amount__change {
-  background: rgba(19,35,29,1);
+  background: #314B2E;
   color: #fff;
   font-size: 14px;
   font-weight: 800;
@@ -109,12 +109,31 @@
 
 .cart_submit {
   padding: 12px 18px;
-  margin-top: 30px;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  background-color: rgba(19,35,29,1);
+  background-color: #314B2E;
   text-decoration: none;
   cursor: pointer;
   border: none;
+}
+
+.cart_footer {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+
+.cart_footer_text {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30px;
+  background-color: #314B2E;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
 }

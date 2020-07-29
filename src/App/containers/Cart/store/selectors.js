@@ -9,3 +9,10 @@ export const groupedCart = (state) => {
   }, []);
   return groupedById;
 }
+
+export const cartSum = (state) => {
+  const sum = state.reduce(function (accum, item) {
+    return accum + item.cost || 0;
+  }, 0);
+  return Math.floor(sum * 100) / 100;
+}
