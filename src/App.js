@@ -3,7 +3,7 @@ import Header from './App/components/Header.jsx';
 import Menu from './App/containers/Menu';
 import User from './App/containers/User';
 import Cart from './App/containers/Cart';
-import { Switch, Route } from 'react-router-dom';
+import { Redirect, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { connect } from "react-redux";
 
@@ -13,10 +13,13 @@ class App extends Component {
       <>
         <Header />
         <main>
-          <section>
+          <section className="container content">
             <Switch>
+              <Route exact path="/">
+                <Redirect to="/menu" />
+              </Route>
               <Route path="/menu" component={Menu} />
-              <Route exact path="/" component={User} />
+              <Route path="/user" component={User} />
               <Route path="/cart" component={Cart} />
             </Switch>
           </section>

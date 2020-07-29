@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { actions } from '../containers/Menu/store/duck';
-import { getListContent } from '../containers/Menu/store/selectors';
+import { actions as cartActions } from '../containers/Cart/store/duck';
+import styles from './List.module.css';
 
 const mapStateToProps = (state) => ({
   menuList: state.menuListReducer.menuList,
 });
-const mapDispatchToProps = (state) => ({});
+
+const mapDispatchToProps = (dispatch) => ({
+  addToCart: (value) => dispatch(cartActions.addToCart(value)),
+});
 
 class List extends Component {
   componentDidMount() {
@@ -14,8 +17,7 @@ class List extends Component {
   };
 
   render() {
-    const {menuList} = this.props;
-    const match = this.props.match;
+    const {menuList, match, addToCart } = this.props;
     const title = match.params.menuItem;
     const getListContent = (state, sectionName) => {
       return state.filter(item => item.section === sectionName);
@@ -24,17 +26,19 @@ class List extends Component {
 
     return (
       <>
-        <div className="menu-content">
-          <ul className="menu-content__list">
+        <div className={styles.menu_content}>
+          <ul className={styles.menu_content__list}>
             {listContent.map((item, index) => (
-              <li key={index} className="menu-content__item">
-                <div>
-                  <img src={item.img_url} alt=""/>
+              <li key={index} className={styles.menu_content__item}>
+                <div className={styles.menu_block}>
+                  <div className={styles.menu_block__image}>
+                    <img src={item.img_url} alt=""/>
+                  </div>
+                  <h3>{item.name}</h3>
+                  <p>{item.description}</p>
+                  <span>$ {item.cost}</span>
+                  <button className={styles.button} onClick={() => addToCart(item)}>Add to cart</button>
                 </div>
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
-                <span>{item.cost}</span>
-                <button>Add to cart</button>
               </li>
             ))}
           </ul>

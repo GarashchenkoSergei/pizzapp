@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Redirect, Route, NavLink } from 'react-router-dom';
 import List from '../../components/List';
 import { connect } from 'react-redux';
 import { actions } from './store/duck';
 import { getMenuSections } from './store/selectors';
+import styles from './Menu.module.css'
 
 const mapStateToProps = (state) => ({
   menuList: state.menuListReducer.menuList,
@@ -22,19 +23,21 @@ class Menu extends Component {
 
   render() {
     const { menuSections } = this.props;
+
     return ( 
       <>
-        <div className="main-menu">
-          <ul className="topbar-nav__list">
+        <div className={styles.main_menu}>
+          <ul className={styles.menu_nav__list}>
             {menuSections.map((item, index) => (
-              <li key={index} className="topbar-nav__item">
-                <Link to={`/menu/${item}`}>{item}</Link>
+              <li key={index} className={styles.menu_nav__item}>
+                <NavLink activeClassName="active" to={`/menu/${item}`}>{item}</NavLink>
               </li>
             ))}
           </ul>
         </div>
         <div className="main-content">
           <Route path={`/menu/:menuItem`} component={List} />
+          <Redirect from="/menu" to="/menu/pizza"/>
         </div>
       </>
     );

@@ -1,0 +1,15 @@
+.main_menu {
+  padding: 15px 0;
+}
+
+.menu_nav__list {
+  display: flex;
+}
+
+.menu_nav__item a {
+  display: block;
+  font-size: 20px;
+  color: #000;
+  margin-right: 15px;
+  text-transform: capitalize;
+}
