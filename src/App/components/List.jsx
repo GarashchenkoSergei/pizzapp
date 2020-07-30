@@ -12,10 +12,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class List extends Component {
-  componentDidMount() {
-    
-  };
-
   render() {
     const {menuList, match, addToCart } = this.props;
     const title = match.params.menuItem;

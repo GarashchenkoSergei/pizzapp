@@ -50,6 +50,8 @@ export const cartReducer = (state = initialState, action) => {
         ...state,
         isDollar: state.isDollar ? state.isDollar = false : state.isDollar = true,
       }
+    case constants.SUBMIT_ORDER:
+      return console.log('order submitted');
     default:
       return state;
   }

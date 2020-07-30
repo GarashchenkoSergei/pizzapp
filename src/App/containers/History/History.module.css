@@ -1,0 +1,13 @@
+.history__list {
+  padding: 20px 10px;
+}
+
+.history__item {
+  margin-bottom: 20px;
+}
+
+.history__item p{
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+}

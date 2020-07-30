@@ -16,3 +16,10 @@ export const cartSum = (state) => {
   }, 0);
   return Math.floor(sum * 100) / 100;
 }
+
+export const cartSumEuro = (state) => {
+  const sum = state.reduce(function (accum, item) {
+    return accum + item.cost || 0;
+  }, 0);
+  return Math.floor(sum * 85) / 100;
+}

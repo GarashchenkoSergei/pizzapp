@@ -9,6 +9,7 @@
   cursor: pointer;
   border: none;
   outline: none;
+  border-radius: 8px;
 }
 
 .menu_content__list {
@@ -18,8 +19,68 @@
 
 .menu_content__item {
   width: 33%;
-  padding: 20px;
+  padding: 30px 20px;
   overflow: hidden;
+  border-radius: 10px;
+}
+
+.menu_content__item:hover,
+.menu_content__item:active,
+.menu_content__item:focus {
+  color: #fff;
+}
+
+.menu_content__item:hover .button,
+.menu_content__item:active .button,
+.menu_content__item:focus .button {
+  background: #fff;
+  color: #000;
+}
+
+.menu_content__item:hover p,
+.menu_content__item:active p,
+.menu_content__item:focus p {
+  color: #fff;
+}
+
+.menu_content__item:nth-child(4n+1):hover,
+.menu_content__item:nth-child(4n+1):active,
+.menu_content__item:nth-child(4n+1):focus {
+  background: #528C63;
+  background-image: url(/images/leo.jpg);
+  background-position: -145px -66px;;
+  background-size: 160%;
+  background-repeat: no-repeat;
+}
+
+.menu_content__item:nth-child(4n+2):hover,
+.menu_content__item:nth-child(4n+2):active,
+.menu_content__item:nth-child(4n+2):focus {
+  background:#A94D31;
+  background-image: url(/images/raf.jpg);
+  background-position: -140px -60px;
+  background-size: 160%;
+  background-repeat: no-repeat;
+}
+
+.menu_content__item:nth-child(4n+3):hover,
+.menu_content__item:nth-child(4n+3):active,
+.menu_content__item:nth-child(4n+3):focus {
+  background:#7D315F;
+  background-image: url(/images/donny.jpg);
+  background-position: -170px -85px;
+  background-size: 160%;
+  background-repeat: no-repeat;
+}
+
+.menu_content__item:nth-child(4n+4):hover,
+.menu_content__item:nth-child(4n+4):active,
+.menu_content__item:nth-child(4n+4):focus {
+  background:#B5AC5E;
+  background-image: url(/images/micky.jpg);
+  background-position: -148px -58px;
+  background-size: 160%;
+  background-repeat: no-repeat;
 }
 
 @media(max-width: 991px) {

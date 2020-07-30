@@ -2,6 +2,10 @@
   padding: 15px 0;
 }
 
+.main_content {
+  padding-bottom: 20px;
+}
+
 .menu_nav__list {
   display: flex;
 }

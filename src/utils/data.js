@@ -5,7 +5,7 @@ const pseudoServerResponse = [
     name: 'Pepperoni',
     description: 'Double pepperoni, mozzarella, marinara sauce, fresh basil',
     cost: 8.99,
-    img_url: '/images/pepperoni.jpg',
+    img_url: '/images/pepperoni.png',
   },
   {
     section: 'pizza',
@@ -13,7 +13,7 @@ const pseudoServerResponse = [
     name: 'Cheese',
     description: 'Mozzarella, marinara sauce, fresh basil',
     cost: 7.99,
-    img_url: '/images/cheese.jpg',
+    img_url: '/images/cheese.png',
   },
   {
     section: 'pizza',
@@ -21,7 +21,7 @@ const pseudoServerResponse = [
     name: 'Supreme',
     description: 'Pepperoni, fresh basil, mozzarella, italian sausage, bacon, mushrooms, red onions, black olives, green peppers, marinara sauce',
     cost: 11.99,
-    img_url: '/images/supreme.jpg',
+    img_url: '/images/supreme.png',
   },
   {
     section: 'pizza',
@@ -29,7 +29,7 @@ const pseudoServerResponse = [
     name: 'Meat Pizza',
     description: 'Pepperoni, ham, italian sausage, mozzarella, bacon, marinara sauce, fresh basil',
     cost: 11.99,
-    img_url: '/images/meat.jpg',
+    img_url: '/images/meat.png',
   },
   {
     section: 'pizza',
@@ -37,7 +37,7 @@ const pseudoServerResponse = [
     name: 'Hawaiian',
     description: 'Ham, fresh pineapple, mozzarella, marinara sauce, fresh basil',
     cost: 10.99,
-    img_url: '/images/hawaiian.jpg',
+    img_url: '/images/hawaiian.png',
   },
   {
     section: 'pizza',
@@ -45,7 +45,7 @@ const pseudoServerResponse = [
     name: 'Sausage',
     description: 'Double italian sausage, mozzarella, marinara sauce, fresh basil',
     cost: 9.99,
-    img_url: '/images/sausage.jpg',
+    img_url: '/images/sausage.png',
   },
   {
     section: 'pizza',
@@ -53,7 +53,7 @@ const pseudoServerResponse = [
     name: 'Veggie',
     description: 'Green peppers, cherry tomatoes, mozzarella, ricotta, fresh parsley, mushrooms, black olives, red onions',
     cost: 10.99,
-    img_url: '/images/veggie.jpg',
+    img_url: '/images/veggie.png',
   },
   {
     section: 'pizza',
@@ -61,7 +61,7 @@ const pseudoServerResponse = [
     name: 'Chicken Club',
     description: 'Grilled chicken, cherry tomatoes, ricotta, fresh parsley, mozzarella, bacon, red onions',
     cost: 8.99,
-    img_url: '/images/chicken.jpg',
+    img_url: '/images/chicken.png',
   },
   {
     section: 'drinks',
@@ -89,4 +89,17 @@ const pseudoServerResponse = [
   },
 ];
 
-export default pseudoServerResponse;
+const userOrders = [
+  {
+    orderId: 12345,
+    date: '10/20/2019',
+    details: 'Address, etc',
+  },
+  {
+    orderId: 12345,
+    date: '01/10/2020',
+    details: 'Address, etc',
+  }
+];
+
+export { pseudoServerResponse, userOrders };

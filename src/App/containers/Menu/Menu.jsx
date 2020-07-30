@@ -35,7 +35,7 @@ class Menu extends Component {
             ))}
           </ul>
         </div>
-        <div className="main-content">
+        <div className={styles.main_content}>
           <Route path={`/menu/:menuItem`} component={List} />
           <Redirect from="/menu" to="/menu/pizza"/>
         </div>

@@ -1,7 +1,7 @@
 import { takeEvery, put } from 'redux-saga/effects';
 import { actions } from './duck';
 import * as constants from './constants';
-import pseudoServerResponse from '../../../../utils/data';
+import { pseudoServerResponse } from '../../../../utils/data';
 
 function* receiveMenuListWorker(action) {
   try {
