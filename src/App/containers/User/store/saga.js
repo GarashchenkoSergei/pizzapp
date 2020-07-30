@@ -3,8 +3,6 @@ import { actions } from './duck';
 import * as constants from './constants';
 
 function* loginWorker(action) {
-  const {payload} = action;
-
   try {
     const result = true;
     if (!result) throw new Error(result.data.error); 

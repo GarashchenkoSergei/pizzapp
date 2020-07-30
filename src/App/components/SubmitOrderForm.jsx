@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { useForm } from 'react-hook-form';
 import styles from './SubmitOrderForm.module.css';
 import { connect } from 'react-redux';
 import { actions } from '../containers/Cart/store/duck';
