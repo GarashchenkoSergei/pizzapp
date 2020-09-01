@@ -1,3 +1,5 @@
+Please check the demo first https://ninja-app.herokuapp.com/
+
 ## What is this?
 Just a little demo of the pizza ordering application.  
 You can add to cart, remove from cart, login to check orders history. Doesn't have any servers connected, so all content is hardcoded.
